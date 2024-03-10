@@ -15,6 +15,76 @@
 */
 
 .page {
+  background-color: var(--background-color);
   min-inline-size: 320px;
   min-block-size: 100dvb;
 }
+
+/* 
+___________________________________________________________________
+
+                      Настройки для блока header
+
+___________________________________________________________________
+*/
+
+
+
+/* Стили для медиазапросов блока header */
+
+/* 
+___________________________________________________________________
+
+                      Настройки для блока main
+
+___________________________________________________________________
+*/
+
+.main {
+  padding-block-start: 104px;
+  color: var(--accent-color);
+}
+
+.main__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 54px;
+}
+
+.main__list-item {
+  max-inline-size: 696px;
+}
+
+.main__card {
+  border: 2px solid var(--accent-color);
+}
+
+.main__card-title {
+  padding: 3px 24px 3px 10px;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.main__card-image {
+  inline-size: 100%;
+  block-size: auto;
+}
+
+.main__card-text {
+}
+
+.main__card-button {
+}
+
+.main__card-button::before {
+}
+
+.main__button {
+  border: 2px solid var(--accent-color);
+  margin-block-start: 54px;
+  margin-block-end: 103px;
+}
+
+/* Стили для медиазапросов блока main */
