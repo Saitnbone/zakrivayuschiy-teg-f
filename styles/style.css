@@ -20,6 +20,9 @@
   align-items: center;
   justify-content: center;
   background-color: var(--background-color);
+  background-image: var(--background-image);
+  color: var(--accent-color);
+  font-weight: var(--main-text-weight);
   min-inline-size: 320px;
   min-block-size: 100dvb;
 }
@@ -39,7 +42,7 @@ ___________________________________________________________________
   justify-content: center;
   border: 2px solid var(--accent-color);
   background-color: var(--background-color);
-  /* max-inline-size: 696px; */
+  max-inline-size: 696px;
   margin-block-start: 102px;
   block-size: clamp(375px, 50%, 696px);
 }
@@ -52,7 +55,6 @@ ___________________________________________________________________
   text-align: center;
   color: var(--accent-color);
   line-height: 49px;
-  /* letter-spacing: 1px; */
   margin-left: 120px;
   margin-right: 120px;
   padding-block-start: 136px;
@@ -88,19 +90,35 @@ ___________________________________________________________________
   outline: none;
 }
 
+.theme-menu__button:after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  margin-top: -3px;
+  background-color: currentColor;
+  transition: width 0.5s;
+}
+
 .theme-menu__button:hover {
   cursor: pointer;
   opacity: 0.5;
 }
 
+.theme-menu__button:hover::after {
+  cursor: pointer;
+  opacity: 0.5;
+  width: 120%;
+}
+
 /* Стили для медиазапросов блока header */
 
 /* 
-___________________________________________________________________
+--------------------------------------------------------------------
 
-                      Настройки для блока main
+                        Настройки для блока main
 
-___________________________________________________________________
+--------------------------------------------------------------------
 */
 
 .main {
@@ -136,28 +154,15 @@ ___________________________________________________________________
   border-block-end: 2px solid var(--accent-color);
 }
 
-.main__card-image:nth-child(1) {
+.second-image {
+  filter: grayscale(80%);
 }
 
-.main__card-image:nth-child(2) {
+.third-image {
+  filter: contrast(200%);
 }
 
-.main__card-image:nth-child(3) {
-}
-
-.main__card-image:nth-child(4) {
-}
-
-.main__card-image:nth-child(5) {
-}
-
-.main__card-image:nth-child(6) {
-}
-
-.main__card-image:nth-child(7) {
-}
-
-.main__card-image:nth-child(8) {
+.eighth-image {
 }
 
 .main__card-content {
@@ -177,6 +182,18 @@ ___________________________________________________________________
   line-height: 21px;
 }
 
+.main__card-like-block {
+  display: flex;
+  gap: 15px;
+}
+
+.main__card-like-icon {
+}
+
+.main__card-like-icon:hover {
+  cursor: pointer;
+}
+
 .main__card-button {
   position: relative;
   display: flex;
@@ -189,13 +206,8 @@ ___________________________________________________________________
   border: 2px solid var(--accent-color);
 }
 
-.main__card-button::before {
-  position: absolute;
-  content: url("../svg/heart.svg");
-  display: inline-block;
-  /* fill: var(--accent-color); */
-  top: 4px;
-  left: -43px;
+.main__card-button:hover {
+  cursor: pointer;
 }
 
 .main__button {
@@ -204,4 +216,28 @@ ___________________________________________________________________
   margin-block-end: 103px;
 }
 
+.main__button:hover {
+  cursor: pointer;
+}
+
 /* Стили для медиазапросов блока main */
+
+/* 
+--------------------------------------------------------------------
+
+                        Настройки для блока footer
+
+--------------------------------------------------------------------
+*/
+
+.main__button {
+  border: 2px solid var(--accent-color);
+  margin-block-start: 54px;
+  margin-block-end: 103px;
+}
+
+.main__button:hover {
+  cursor: pointer;
+}
+
+/* Стили для медиазапросов блока footer */

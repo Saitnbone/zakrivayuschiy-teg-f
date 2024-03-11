@@ -5,12 +5,50 @@
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
 
-.theme-dark {
+/* 
+--------------------------------------------------------------------
+
+                  Настройки для темной темы страницы
+
+--------------------------------------------------------------------
+*/
+
+:root.theme-dark {
   --accent-color: rgb(0, 204, 20);
   --background-color: rgb(0, 0, 0);
+  --title-font-weight: 800;
+  --main-text-weight: 400;
 }
 
-.theme-light {
+:root.theme-light {
   --accent-color: rgb(0, 0, 0);
   --background-color: rgb(255, 255, 255);
+  --title-font-weight: 700;
+  --main-text-weight: 400;
+}
+
+/* 
+--------------------------------------------------------------------
+
+                  Настройки для светлой темы страницы
+
+--------------------------------------------------------------------
+*/
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: rgb(0, 0, 0);
+    --background-color: rgb(255, 255, 255);
+    --title-font-weight: 700;
+    --main-text-weight: 400;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-color: rgb(0, 204, 20);
+    --background-color: rgb(0, 0, 0);
+    --title-font-weight: 800;
+    --main-text-weight: 400;
+  }
 }

@@ -1,6 +1,9 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
+  --title-font-weight: 700;
+  --main-text-weight: 400;
   --background-color: rgb(255, 255, 255);
+  --background-image: url("");
   --accent-color: rgb(0, 0, 0);
 }

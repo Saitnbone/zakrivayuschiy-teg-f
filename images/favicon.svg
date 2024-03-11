@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" fill="none">
+<style>
+  @media (prefers-color-scheme: dark) {
+    path { fill: #00cc14; }
+  }
+  @media (prefers-color-scheme: light) {
+    path { fill: black; }
+  }
+</style>
+<path fill="#000" fill-rule="evenodd" 
+d="M0 256V0h256v256H0Zm192-96h-32v-32h-32V96H96v32H64v32H32V32h192v96h-32v32Zm-32 32h32v-32h32v64h-64v-32Zm0 0h-32v32H32v-32h32v-32h32v-32h32v32h32v32Zm32-128h-32v32h32V64Z"/>
+</svg>
