@@ -146,12 +146,15 @@ ___________________________________________________________________
   line-height: 22px;
 }
 
+.main__card-block-image {
+  border-block-start: 2px solid var(--accent-color);
+  border-block-end: 2px solid var(--accent-color);
+}
+
 .main__card-image {
   position: relative;
   inline-size: 100%;
   block-size: auto;
-  border-block-start: 2px solid var(--accent-color);
-  border-block-end: 2px solid var(--accent-color);
 }
 
 .second-image {
@@ -159,10 +162,28 @@ ___________________________________________________________________
 }
 
 .third-image {
-  filter: contrast(200%);
+  filter: saturate(350%);
+}
+
+.fourth-image {
+  filter: hue-rotate(34deg);
+}
+
+.fifth-image {
+  filter: invert(0.8);
+}
+
+.sixth-image {
+  filter: sepia(80%);
+}
+
+.seventh-image {
+  filter: blur(5px);
 }
 
 .eighth-image {
+  filter: brightness(0.8) hue-rotate(90deg) opacity(0.9) blur(1px)
+    saturate(170%);
 }
 
 .main__card-content {
@@ -170,10 +191,6 @@ ___________________________________________________________________
   flex-direction: column;
   gap: 20px;
   margin: 25px;
-}
-
-.main__card-content:nth-child(3) {
-  align-items: flex-end;
 }
 
 .main__card-text {
@@ -184,6 +201,7 @@ ___________________________________________________________________
 
 .main__card-like-block {
   display: flex;
+  justify-content: flex-end;
   gap: 15px;
 }
 
