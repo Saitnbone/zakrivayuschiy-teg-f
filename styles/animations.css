@@ -13,6 +13,11 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 
-/* @keyframes (){
-
-} */
+@keyframes like {
+  0% {
+    background-color: red;
+  }
+  100% {
+    background-color: aqua;
+  }
+}

@@ -18,6 +18,7 @@
   --background-color: rgb(0, 0, 0);
   --title-font-weight: 800;
   --main-text-weight: 400;
+  --button_text: rgb(0, 204, 20);
 }
 
 :root.theme-light {
@@ -25,6 +26,7 @@
   --background-color: rgb(255, 255, 255);
   --title-font-weight: 700;
   --main-text-weight: 400;
+  --button-text: rgb(255, 255, 255);
 }
 
 /* 
@@ -41,6 +43,7 @@
     --background-color: rgb(255, 255, 255);
     --title-font-weight: 700;
     --main-text-weight: 400;
+    --button_text: rgb(255, 255, 255);
   }
 }
 
@@ -50,5 +53,6 @@
     --background-color: rgb(0, 0, 0);
     --title-font-weight: 800;
     --main-text-weight: 400;
+    --button_text: rgb(0, 204, 20);
   }
 }
