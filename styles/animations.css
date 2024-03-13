@@ -21,3 +21,30 @@
     transform: translateX(4px);
   }
 }
+
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes sparkAnimation {
+  0%,
+  100% {
+    fill: transparent;
+    opacity: 1;
+  }
+  50% {
+    fill: red;
+    opacity: 0;
+  }
+}
+
+@keyframes contour {
+  to {
+    fill: red;
+  }
+}

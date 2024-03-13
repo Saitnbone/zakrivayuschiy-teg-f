@@ -260,6 +260,8 @@ ___________________________________________________________________
   transition: outline 0.3s ease-in-out;
 }
 
+/* Настройки для иконки лайка */
+
 .like-icon {
   /* animation: like 2s infinite alternate;  */
 }
@@ -272,6 +274,68 @@ ___________________________________________________________________
   fill: var(--accent-color);
   /* animation: like 2s infinite alternate; */
 }
+
+.contour {
+  fill: var(--accent-color);
+}
+
+.main-body {
+  fill: transparent;
+  transition: fill 0.5s 0.05s ease;
+}
+
+.core {
+  fill: transparent;
+  transition: fill 0.3s 0.03s ease;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--accent-color);
+  /* transition-delay: 0.05s; */
+}
+
+.like-icon:hover .core {
+  fill: var(--accent-color);
+  /* transition-delay: 0.03s; */
+}
+
+.like-icon:active .main-body {
+  fill: red;
+}
+
+.like-icon:active .core {
+  fill: red;
+}
+
+.is-liked {
+  transform-origin: center;
+  animation: heartbeat 0.3s ease-in 0.1s 2 alternate,
+    contour 0.1s linear forwards;
+}
+
+.like-icon.is-liked .contour {
+  fill: red;
+}
+
+.like-icon.is-liked .main-body {
+  fill: red;
+}
+
+.like-icon.is-liked .core {
+  fill: red;
+}
+
+.like-icon.is-liked .sparks {
+  fill: red;
+  transform: scale(1);
+  animation: sparkAnimation 0.3s ease-in 0.3s forwards;
+}
+
+/* Настройки для кнопки лайка */
 
 .main__card-like-icon:hover {
   cursor: pointer;
@@ -287,7 +351,6 @@ ___________________________________________________________________
   font-size: 14px;
   text-align: left;
   border: 2px solid var(--accent-color);
-  /* overflow: hidden; */
 }
 
 .main__card-button:before {
@@ -299,7 +362,6 @@ ___________________________________________________________________
   height: 100%;
   background-color: var(--accent-color);
   transition: width 0.5s ease-in-out;
-  /* mix-blend-mode: difference; */
 }
 
 .main__card-button:hover::before {
@@ -319,11 +381,6 @@ ___________________________________________________________________
   box-shadow: 2px 2px 0px 0px rgb(0, 0, 0);
 }
 
-/* .main__card-button:active {
-  color: var(--button-text);
-  background-color: var(--accent-color);
-} */
-
 .button__text {
   color: var(--accent-color);
   z-index: 1;
@@ -333,7 +390,6 @@ ___________________________________________________________________
 
 .main__card-button:hover .button__text {
   color: var(--button-text);
-  /* mix-blend-mode: difference; */
 }
 
 /* Стили для медиазапросов блока main */
