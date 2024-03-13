@@ -13,11 +13,11 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 
-@keyframes like {
+@keyframes moveRightLeft {
   0% {
-    background-color: red;
+    transform: translateX(0);
   }
   100% {
-    background-color: aqua;
+    transform: translateX(4px);
   }
 }

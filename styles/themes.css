@@ -27,6 +27,8 @@
   --title-font-weight: 700;
   --main-text-weight: 400;
   --button-text: rgb(255, 255, 255);
+  --gradient-color: #d3d3d3;
+  --gradinet-color-second: #ffffff00;
 }
 
 /* 
@@ -44,6 +46,8 @@
     --title-font-weight: 700;
     --main-text-weight: 400;
     --button_text: rgb(255, 255, 255);
+    --gradient-color: #d3d3d3;
+    --gradinet-color-second: #ffffff00;
   }
 }
 
@@ -54,5 +58,7 @@
     --title-font-weight: 800;
     --main-text-weight: 400;
     --button_text: rgb(0, 204, 20);
+    --gradient-color: #007f0c;
+    --gradinet-color-second: #004306;
   }
 }

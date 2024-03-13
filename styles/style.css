@@ -22,17 +22,17 @@
   background-color: var(--background-color);
   background-image: repeating-linear-gradient(
       to left,
-      #d3d3d3,
-      #ffffff00 4px,
-      #d3d3d3 2px,
-      #ffffff00 4px
+      var(--gradinet-color-second),
+      var(--gradinet-color-second) 4px,
+      var(--gradient-color) 4px,
+      var(--gradient-color) 8px
     ),
     repeating-linear-gradient(
       to top,
-      #d3d3d3,
-      #ffffff00 4px,
-      #d3d3d3 2px,
-      #ffffff00 4px
+      var(--gradinet-color-second),
+      var(--gradinet-color-second) 4px,
+      var(--gradient-color) 4px,
+      var(--gradient-color) 8px
     ),
     linear-gradient(to bottom, rgba(0, 0, 0, 0.01) 0%, rgba(0, 0, 0, 1) 100%);
   background-attachment: fixed;
@@ -97,14 +97,25 @@ ___________________________________________________________________
   position: relative;
   color: var(--accent-color);
   border: none;
+  transition: opacity 0.3s ease, transform 0.3s ease, filter 0.3s ease;
 }
 
-.theme-menu__button:focus {
-  outline: none;
+.theme-menu__button:hover:enabled {
+  opacity: 0.6;
 }
 
-.theme-menu__button:focus-visible {
-  outline: none;
+.theme-menu__button:disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.theme-menu__button:disabled::before {
+  content: "▶";
+  position: absolute;
+  right: 67px;
+  color: currentColor;
+  animation: moveRightLeft 0.5s ease-in-out infinite alternate;
 }
 
 .theme-menu__button:after {
@@ -114,31 +125,28 @@ ___________________________________________________________________
   height: 2px;
   margin-top: -3px;
   background-color: currentColor;
-  transition: width 0.5s;
+  transition: width 0.3s;
 }
 
-.theme-menu__button:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
+.theme-menu__button:focus {
+  outline: none;
 }
 
-.theme-menu__button:disabled::before {
-  content: "▶";
-  position: absolute;
-  right: 67px;
-  /* margin-right: 5px; */
-  color: currentColor;
+.theme-menu__button:focus-visible::after {
+  outline: none;
+  opacity: 0.6;
+  width: 100%;
 }
 
 .theme-menu__button:hover {
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .theme-menu__button:hover::after {
   cursor: pointer;
-  opacity: 0.5;
-  width: 120%;
+  opacity: 0.6;
+  width: 100%;
 }
 
 /* Стили для медиазапросов блока header */
@@ -261,7 +269,7 @@ ___________________________________________________________________
 
 .like-icon:active {
   fill: var(--accent-color);
-  animation: like 2s infinite alternate;
+  /* animation: like 2s infinite alternate; */
 }
 
 .main__card-like-icon:hover {
