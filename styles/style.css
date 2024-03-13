@@ -256,7 +256,8 @@ ___________________________________________________________________
 }
 
 .card__icon-button:focus-visible {
-  outline: none;
+  outline: 2px solid var(--accent-color);
+  transition: outline 0.3s ease-in-out;
 }
 
 .like-icon {
@@ -279,13 +280,30 @@ ___________________________________________________________________
 .main__card-button {
   position: relative;
   display: flex;
-  align-items: flex-end;
+  justify-content: center;
   padding: 9px 17px;
   inline-size: 130px;
   block-size: 38px;
   font-size: 14px;
   text-align: left;
   border: 2px solid var(--accent-color);
+  /* overflow: hidden; */
+}
+
+.main__card-button:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--accent-color);
+  transition: width 0.5s ease-in-out;
+  /* mix-blend-mode: difference; */
+}
+
+.main__card-button:hover::before {
+  width: 100%;
 }
 
 .main__card-button:hover {
@@ -301,9 +319,21 @@ ___________________________________________________________________
   box-shadow: 2px 2px 0px 0px rgb(0, 0, 0);
 }
 
-.main__card-button:active {
+/* .main__card-button:active {
   color: var(--button-text);
   background-color: var(--accent-color);
+} */
+
+.button__text {
+  color: var(--accent-color);
+  z-index: 1;
+  transition: color 0.3s ease-in-out;
+  text-align: center;
+}
+
+.main__card-button:hover .button__text {
+  color: var(--button-text);
+  /* mix-blend-mode: difference; */
 }
 
 /* Стили для медиазапросов блока main */
