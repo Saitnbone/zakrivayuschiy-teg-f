@@ -67,9 +67,8 @@ ___________________________________________________________________
   font-family: "Press Start 2P", sans-serif;
   font-weight: normal;
   font-size: clamp(3.063rem, 1.502vw + 2.71rem, 4.063rem);
-  text-transform: uppercase;
   text-align: center;
-  color: var(--accent-color);
+  color: var(--accent-colorxw);
   line-height: 49px;
   margin-left: 120px;
   margin-right: 120px;
@@ -77,6 +76,8 @@ ___________________________________________________________________
 }
 
 .header__text {
+  font-family: "Press Start 2P", sans-serif;
+  text-transform: uppercase;
   color: var(--accent-color);
   line-height: 14px;
   font-size: clamp(0.875rem, 0.845vw + 0.677rem, 1.438rem);
@@ -113,7 +114,7 @@ ___________________________________________________________________
 .theme-menu__button:disabled::before {
   content: "▶";
   position: absolute;
-  right: 67px;
+  right: 110px;
   color: currentColor;
   animation: moveRightLeft 0.5s ease-in-out infinite alternate;
 }
@@ -185,15 +186,12 @@ ___________________________________________________________________
   line-height: 22px;
 }
 
-.main__card-block-image {
-  border-block-start: 2px solid var(--accent-color);
-  border-block-end: 2px solid var(--accent-color);
-}
-
 .main__card-image {
   position: relative;
-  inline-size: 100%;
+  max-inline-size: 100%;
   block-size: auto;
+  border-block-start: 2px solid var(--accent-color);
+  border-block-end: 2px solid var(--accent-color);
 }
 
 .second-image {
@@ -244,9 +242,6 @@ ___________________________________________________________________
   gap: 15px;
 }
 
-.main__card-like-icon {
-}
-
 .card__icon-button {
   border: none;
 }
@@ -262,17 +257,12 @@ ___________________________________________________________________
 
 /* Настройки для иконки лайка */
 
-.like-icon {
-  /* animation: like 2s infinite alternate;  */
-}
-
 .like-icon:hover {
   cursor: pointer;
 }
 
 .like-icon:active {
   fill: var(--accent-color);
-  /* animation: like 2s infinite alternate; */
 }
 
 .contour {
@@ -295,12 +285,10 @@ ___________________________________________________________________
 
 .like-icon:hover .main-body {
   fill: var(--accent-color);
-  /* transition-delay: 0.05s; */
 }
 
 .like-icon:hover .core {
   fill: var(--accent-color);
-  /* transition-delay: 0.03s; */
 }
 
 .like-icon:active .main-body {
@@ -313,7 +301,7 @@ ___________________________________________________________________
 
 .is-liked {
   transform-origin: center;
-  animation: heartbeat 0.3s ease-in 0.1s 2 alternate,
+  animation: heartBeat 0.3s ease-in 0.1s 2 alternate,
     contour 0.1s linear forwards;
 }
 
@@ -342,6 +330,9 @@ ___________________________________________________________________
 }
 
 .main__card-button {
+  font-family: "Press Start 2P", sans-serif;
+  font-weight: 700;
+  text-transform: none;
   position: relative;
   display: flex;
   justify-content: center;
@@ -382,6 +373,7 @@ ___________________________________________________________________
 }
 
 .button__text {
+  position: relative;
   color: var(--accent-color);
   z-index: 1;
   transition: color 0.3s ease-in-out;
@@ -402,26 +394,87 @@ ___________________________________________________________________
 --------------------------------------------------------------------
 */
 
-.footer__button {
+.footer {
+  display: flex;
   background-color: var(--background-color);
   inline-size: 355px;
   block-size: 55px;
-  border: 2px solid var(--accent-color);
   margin-block-start: 54px;
   margin-block-end: 103px;
 }
 
-.footer__button:hover {
+.footer__block-button {
+  display: flex;
+  justify-content: center;
+  inline-size: 100%;
+  block-size: 100%;
+  font-family: "Press Start 2P", sans-serif;
+  position: relative;
+  border: 2px solid var(--accent-color);
+}
+
+.footer__icon-button {
+  border: none;
+  z-index: 1;
+}
+
+.card__icon-path {
+  fill: var(--accent-color);
+  transition: fill 0.3s ease-in-out;
+  mix-blend-mode: difference;
+}
+
+.footer__button-text {
+  padding: 18.5px 0;
+}
+
+.footer__block-button:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--accent-color);
+  transition: width 0.4s ease-in-out;
+}
+
+.footer__block-button:hover::before {
+  width: 100%;
+}
+
+.footer__block-button:hover {
   cursor: pointer;
 }
 
-.footer__button:focus {
+.footer__block-button:hover .card__icon-path {
+  fill: var(--button-text);
+}
+
+.footer__block-button:hover .button__text {
+  color: var(--button-text);
+}
+
+.footer__block-button:focus {
   outline: none;
 }
 
-.footer__button:focus-visible {
+.footer__block-button:focus-visible {
   outline: 1px solid var(--accent-color);
   box-shadow: 2px 2px 0px 0px rgb(0, 0, 0);
 }
 
 /* Стили для медиазапросов блока footer */
+
+@media (width <= 375px) {
+  .footer{
+    inline-size: 306;
+    block-size: 84px;
+  }
+  .footer__block-button {
+    display: flex;
+    flex-direction: column;
+    inline-size: 100%;
+    block-size: 100%;
+  }
+}

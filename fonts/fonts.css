@@ -2,28 +2,28 @@
 
 @font-face {
   font-family: "Inter";
-  src: url(./IBMPlexMono-Regular.woff) format("woff");
+  src: url(./Inter-Variable.woff2) format("woff2");
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Inter";
-  src: url(./IBMPlexMono-Bold.woff) format("woff");
+  src: url(./Inter-Variable.woff2) format("woff2");
   font-weight: 700;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Inter";
-  src: url(./IBMPlexMono-Bold.woff) format("woff");
+  src: url(./Inter-Variable.woff2) format("woff2");
   font-weight: 800;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Press Start 2P";
-  src: url(./IBMPlexMono-Bold.woff) format("woff");
-  font-weight: normal;
+  src: url(./PressStart2P-Regular.woff) format("woff");
+  font-weight: 700;
   font-display: swap;
 }
