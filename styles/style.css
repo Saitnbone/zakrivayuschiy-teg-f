@@ -19,7 +19,24 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--background-color);
+  background: repeating-linear-gradient(
+      to right,
+      #d3d3d3 0,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #d3d3d3 0,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(to bottom, #e7e7e7, #1a1a1a);
+  background-size: 100% 4px, 4px 100%, 100% 100%;
+  background-attachment: fixed;
+  /* background-color: var(--background-color);
   background-image: repeating-linear-gradient(
       to left,
       var(--gradinet-color-second),
@@ -34,7 +51,7 @@
       var(--gradient-color) 4px,
       var(--gradient-color) 8px
     ),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.01) 0%, rgba(0, 0, 0, 1) 100%);
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.01) 0%, rgba(0, 0, 0, 1) 100%); */
   background-attachment: fixed;
   background-size: cover;
   color: var(--accent-color);
@@ -464,17 +481,63 @@ ___________________________________________________________________
   box-shadow: 2px 2px 0px 0px rgb(0, 0, 0);
 }
 
+/* Настройки диалогового окна */
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.3);
+  backdrop-filter: blur(7px);
+}
+
+.dialog-window {
+  min-inline-size: 353px;
+  min-block-size: 193px;
+  background-color: var(--background-color);
+  border: solid 2px var(--accent-color);
+}
+
+.dialog-window__block {
+  display: flex;
+  padding: 30px;
+}
+
+.dialog-window__block-text {
+  color: var(--accent-color);
+}
+
+.dialog-window__button {
+  inline-size: 100%;
+  block-size: 30px;
+  text-align: center;
+  border: solid 2px var(--accent-color);
+  color: var(--accent-color);
+}
+
+.dialog-window__button:hover {
+  cursor: pointer;
+}
+
 /* Стили для медиазапросов блока footer */
 
 @media (width <= 375px) {
-  .footer{
+  .footer {
     inline-size: 306;
-    block-size: 84px;
+    block-size: 100px;
   }
+
   .footer__block-button {
     display: flex;
     flex-direction: column;
-    inline-size: 100%;
-    block-size: 100%;
+  }
+  .footer__icon-button {
+    margin: auto;
+  }
+
+  .card__icon-diskette {
+    width: 28px;
+    height: 28px;
+  }
+
+  .footer__button-text {
+    margin: auto;
   }
 }
