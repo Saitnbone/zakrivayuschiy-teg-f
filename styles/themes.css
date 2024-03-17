@@ -57,9 +57,7 @@
   :root {
     --button-color: var(--button-text);
     --button-text: rgb(255, 255, 255);
-    --main-color: #fff;
     --accent-color: #000;
-
     --gradient-settings: repeating-linear-gradient(#d3d3d3, transparent 2px),
       repeating-linear-gradient(90deg, #d3d3d3, transparent 2px),
       linear-gradient(#e7e7e7 0.01%, #1a1a1a);
@@ -73,13 +71,13 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --button-color: var(--button-text);
-    --button-text: #000;
+    --background-color: #000;
 
     --gradient-settings: repeating-linear-gradient(
-        var(--main-color),
+        var(--background-color),
         transparent 2px
       ),
-      repeating-linear-gradient(90deg, var(--main-color), transparent 2px),
+      repeating-linear-gradient(90deg, var(--background-color), transparent 2px),
       linear-gradient(#007f0c, #004306);
     --accent-color: rgb(0, 204, 20);
     --background-color: rgb(0, 0, 0);
