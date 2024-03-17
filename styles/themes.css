@@ -14,6 +14,9 @@
 */
 
 :root.theme-dark {
+  --button-fill-color: var(--accent-color);
+  --main-color: #000;
+
   --accent-color: rgb(0, 204, 20);
   --background-color: rgb(0, 0, 0);
   --title-font-weight: 800;
@@ -22,6 +25,9 @@
 }
 
 :root.theme-light {
+  --button-fill-color: var(--main-color);
+  --main-color: #fff;
+
   --accent-color: rgb(0, 0, 0);
   --background-color: rgb(255, 255, 255);
   --title-font-weight: 700;
@@ -41,7 +47,10 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --accent-color: rgb(0, 0, 0);
+    --button-fill-color: var(--main-color);
+    --main-color: #fff;
+    --accent-color: #000;
+
     --background-color: rgb(255, 255, 255);
     --title-font-weight: 700;
     --main-text-weight: 400;
@@ -53,6 +62,10 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --button-fill-color: var(--accent-color);
+    --main-color: #000;
+    --accent-color: #00cc14;
+
     --accent-color: rgb(0, 204, 20);
     --background-color: rgb(0, 0, 0);
     --title-font-weight: 800;

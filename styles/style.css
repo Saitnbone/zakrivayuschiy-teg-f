@@ -21,29 +21,16 @@
   justify-content: center;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  background: repeating-linear-gradient(
-      to right,
-      #d3d3d3 0,
-      #d3d3d3 2px,
-      transparent 2px,
-      transparent 4px
-    ),
-    repeating-linear-gradient(
-      to bottom,
-      #d3d3d3 0,
-      #d3d3d3 2px,
-      transparent 2px,
-      transparent 4px
-    ),
-    linear-gradient(to bottom, #e7e7e7, #1a1a1a);
+  background: repeating-linear-gradient(#d3d3d3, transparent 2px),
+    repeating-linear-gradient(90deg, #d3d3d3, transparent 2px),
+    linear-gradient(#e7e7e7 0.01%, #1a1a1a);
   background-size: 100% 4px, 4px 100%, 100% 100%;
   background-attachment: fixed;
   background-attachment: fixed;
   background-size: cover;
   color: var(--accent-color);
   font-weight: var(--main-text-weight);
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
+  min-inline-size: 375px;
 }
 
 /* 
@@ -381,7 +368,7 @@ ___________________________________________________________________
 .button__text {
   position: relative;
   z-index: 1;
-  transition: color 0.7s ease-in-out;
+  /* transition: color 0.7s ease-in-out; */
   text-align: center;
 }
 
@@ -401,44 +388,35 @@ ___________________________________________________________________
 
 .footer {
   display: flex;
-  background-color: var(--background-color);
   inline-size: 355px;
-  block-size: 55px;
+  min-block-size: 55px;
   margin-block-start: 54px;
   margin-block-end: 103px;
 }
 
 .footer__block-button {
+  position: relative;
   display: flex;
   justify-content: center;
+  gap: 12px;
   inline-size: 100%;
   block-size: 100%;
   font-family: "Press Start 2P", sans-serif;
-  position: relative;
+  background-color: var(--background-color);
   border: 2px solid var(--accent-color);
 }
 
-.footer__icon-button {
-  border: none;
-  z-index: 1;
-}
-
-.card__diskette {
+.card__diskette-icon {
   width: 21px;
   height: 21px;
-  /* z-index: 1;
-  fill: var(--accent-color);
-  transition: fill 0.3s ease-in-out; */
 }
 
-/* .card__icon-diskette {
-  fill: var(--accent-color);
-  transition: fill 0.3s ease-in-out;
-  mix-blend-mode: difference;
-} */
-
 .footer__button-text {
+  color: var(--button-fill-color);
+  font-size: 14px;
+  position: relative;
   padding: 18.5px 0;
+  mix-blend-mode: difference;
 }
 
 .footer__block-button:before {
@@ -460,14 +438,6 @@ ___________________________________________________________________
 
 .footer__block-button:hover {
   cursor: pointer;
-}
-
-.footer__block-button:hover .card__diskette {
-  fill: var(--button-text);
-}
-
-.footer__block-button:hover .button__text {
-  color: var(--button-text);
 }
 
 .footer__block-button:focus {

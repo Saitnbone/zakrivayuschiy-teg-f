@@ -593,15 +593,11 @@
         onclick="window['dialog-id'].showModal();"
       >
         <svg
-          fill="white"
           viewBox="0 0 21 21"
-          class="card__diskette"
+          class="card__diskette-icon"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <use
-            href="svg/diskette.svg#diskette"
-            class="card__icon-diskette"
-          ></use>
+          <use href="svg/diskette.svg#diskette"></use>
         </svg>
         <span class="footer__button-text button__text">
           Сохранить на память</span
@@ -620,7 +616,7 @@
           onclick="window['dialog-id'].close()"
           ;
         >
-          Ok
+          <span class="button__text"> Ok</span>
         </button>
       </dialog>
     </footer>
