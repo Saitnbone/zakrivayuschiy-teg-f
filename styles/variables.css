@@ -3,7 +3,9 @@
 :root {
   --button-fill-color: var(--main-color);
   --main-color: #fff;
-
+  --gradient-settings: repeating-linear-gradient(#d3d3d3, transparent 2px),
+    repeating-linear-gradient(90deg, #d3d3d3, transparent 2px),
+    linear-gradient(#e7e7e7 0.01%, #1a1a1a);
   --title-font-weight: 700;
   --main-text-weight: 400;
   --background-color: rgb(255, 255, 255);

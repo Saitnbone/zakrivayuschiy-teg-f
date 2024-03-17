@@ -14,9 +14,15 @@
 */
 
 :root.theme-dark {
-  --button-fill-color: var(--accent-color);
+  --button-color: var(--accent-color);
   --main-color: #000;
 
+  --gradient-settings: repeating-linear-gradient(
+      var(--main-color),
+      transparent 2px
+    ),
+    repeating-linear-gradient(90deg, var(--main-color), transparent 2px),
+    linear-gradient(#007f0c, #004306);
   --accent-color: rgb(0, 204, 20);
   --background-color: rgb(0, 0, 0);
   --title-font-weight: 800;
@@ -25,16 +31,18 @@
 }
 
 :root.theme-light {
-  --button-fill-color: var(--main-color);
+  --button-color: var(--button-text);
+  --button-text: rgb(255, 255, 255);
   --main-color: #fff;
 
+  --gradient-settings: repeating-linear-gradient(#d3d3d3, transparent 2px),
+    repeating-linear-gradient(90deg, #d3d3d3, transparent 2px),
+    linear-gradient(#e7e7e7 0.01%, #1a1a1a);
   --accent-color: rgb(0, 0, 0);
   --background-color: rgb(255, 255, 255);
   --title-font-weight: 700;
   --main-text-weight: 400;
   --button-text: rgb(255, 255, 255);
-  --gradient-color: #d3d3d3;
-  --gradinet-color-second: #ffffff00;
 }
 
 /* 
@@ -47,31 +55,36 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --button-fill-color: var(--main-color);
+    --button-color: var(--button-text);
+    --button-text: rgb(255, 255, 255);
     --main-color: #fff;
     --accent-color: #000;
 
+    --gradient-settings: repeating-linear-gradient(#d3d3d3, transparent 2px),
+      repeating-linear-gradient(90deg, #d3d3d3, transparent 2px),
+      linear-gradient(#e7e7e7 0.01%, #1a1a1a);
     --background-color: rgb(255, 255, 255);
     --title-font-weight: 700;
     --main-text-weight: 400;
     --button-text: rgb(255, 255, 255);
-    --gradient-color: #d3d3d3;
-    --gradinet-color-second: #ffffff00;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --button-fill-color: var(--accent-color);
-    --main-color: #000;
-    --accent-color: #00cc14;
+    --button-color: var(--button-text);
+    --button-text: #000;
 
+    --gradient-settings: repeating-linear-gradient(
+        var(--main-color),
+        transparent 2px
+      ),
+      repeating-linear-gradient(90deg, var(--main-color), transparent 2px),
+      linear-gradient(#007f0c, #004306);
     --accent-color: rgb(0, 204, 20);
     --background-color: rgb(0, 0, 0);
     --title-font-weight: 800;
     --main-text-weight: 400;
     --button-text: rgb(0, 0, 0);
-    --gradient-color: #007f0c;
-    --gradinet-color-second: #004306;
   }
 }

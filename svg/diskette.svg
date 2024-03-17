@@ -5,12 +5,6 @@
     viewBox="0 0 21 21"
     fill="currentcolor"
 >
-  <style>
-  :root{
-    display: block;
-    z-index: 1;
-  }
-  </style>
 <path
     class="card__icon-path"
     fill="currentcolor"
