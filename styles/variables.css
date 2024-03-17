@@ -1,6 +1,9 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
+  --button-fill-color: var(--main-color);
+  --main-color: #fff;
+
   --title-font-weight: 700;
   --main-text-weight: 400;
   --background-color: rgb(255, 255, 255);
