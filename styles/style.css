@@ -41,7 +41,7 @@ ___________________________________________________________________
   position: relative;
   z-index: 1;
   text-align: center;
-  color: var(--button-color);
+  color: var(--accent-color);
   mix-blend-mode: difference;
 }
 
@@ -51,7 +51,7 @@ ___________________________________________________________________
   font-weight: normal;
   background-color: var(--background-color);
   transition: box-shadow ease-in-out 0.5s;
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--main-color);
 }
 
 .button:hover {
@@ -64,7 +64,7 @@ ___________________________________________________________________
   inset: 0;
   left: 0;
   width: 100%;
-  background-color: var(--button-color);
+  background-color: var(--accent-color);
   transform-origin: left;
   transform: scaleX(0%);
   transition: transform 0.5s ease-in-out;
@@ -102,7 +102,7 @@ ___________________________________________________________________
   justify-content: end;
   width: clamp(350px, 100%, 700px);
   min-height: 369px;
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--main-color);
   background-color: var(--background-color);
   max-inline-size: 696px;
   margin-block-start: 100px;
@@ -112,7 +112,7 @@ ___________________________________________________________________
 .header__link {
   font-size: clamp(3.063rem, 1.502vw + 2.71rem, 4.063rem);
   text-align: center;
-  color: var(--accent-color);
+  color: var(--main-color);
   line-height: 49px;
   margin-left: 120px;
   margin-right: 120px;
@@ -120,7 +120,7 @@ ___________________________________________________________________
 }
 
 .header__title {
-  color: var(--accent-color);
+  color: var(--main-color);
   line-height: 14px;
   font-size: clamp(0.875rem, 0.7143rem + 0.8036vw, 1.4375rem);
   margin-block-start: 34px;
@@ -140,7 +140,7 @@ ___________________________________________________________________
 
 .theme-menu__button {
   position: relative;
-  color: var(--accent-color);
+  color: var(--main-color);
   border: none;
   transition: opacity 0.3s ease, transform 0.3s ease, filter 0.3s ease;
 }
@@ -223,7 +223,7 @@ ___________________________________________________________________
 .main {
   margin-block-start: 100px;
   width: clamp(350px, 100%, 700px);
-  color: var(--accent-color);
+  color: var(--main-color);
 }
 
 .main__list {
@@ -237,7 +237,7 @@ ___________________________________________________________________
 }
 
 .main__card {
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--main-color);
 }
 
 .main__card-title {
@@ -249,8 +249,8 @@ ___________________________________________________________________
 
 .main__card-block-image {
   position: relative;
-  border-block-start: 2px solid var(--accent-color);
-  border-block-end: 2px solid var(--accent-color);
+  border-block-start: 2px solid var(--main-color);
+  border-block-end: 2px solid var(--main-color);
   overflow: hidden;
 }
 
@@ -264,7 +264,7 @@ ___________________________________________________________________
   mix-blend-mode: hard-light;
   letter-spacing: -1px;
   opacity: 0.5;
-  color: var(--accent-color);
+  color: var(--main-color);
   text-shadow: 1px 1px 0 var(--background-color);
   font-weight: 400;
   z-index: 1;
@@ -351,7 +351,7 @@ ___________________________________________________________________
 
 .card__icon-button:focus-visible {
   outline: none;
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--main-color);
 }
 
 /* Настройки для иконки лайка */
@@ -375,7 +375,7 @@ ___________________________________________________________________
 }
 
 .contour {
-  fill: var(--accent-color);
+  fill: var(--main-color);
 }
 
 .main-body {
@@ -393,11 +393,11 @@ ___________________________________________________________________
 }
 
 .like-icon:hover .main-body {
-  fill: var(--accent-color);
+  fill: var(--main-color);
 }
 
 .like-icon:hover .core {
-  fill: var(--accent-color);
+  fill: var(--main-color);
 }
 
 .like-icon:active .main-body {
@@ -505,7 +505,7 @@ dialog::backdrop {
   inline-size: 353px;
   min-block-size: 193px;
   background-color: var(--background-color);
-  border: solid 2px var(--accent-color);
+  border: solid 2px var(--main-color);
 }
 
 .dialog-window__svg {
@@ -516,7 +516,7 @@ dialog::backdrop {
 .dialog-window__block-text {
   font-family: "Press Start 2P", sans-serif;
   text-transform: uppercase;
-  color: var(--accent-color);
+  color: var(--main-color);
   font-weight: 400;
   line-height: 21px;
   font-size: 14px;

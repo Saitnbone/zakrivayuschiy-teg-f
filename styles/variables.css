@@ -1,7 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-  --button-fill-color: var(--button-text);
+  --main-color: #000;
   --gradient-settings: repeating-linear-gradient(#d3d3d3, transparent 2px),
     repeating-linear-gradient(90deg, #d3d3d3, transparent 2px),
     linear-gradient(#e7e7e7 0.01%, #1a1a1a);
@@ -9,8 +9,5 @@
   --main-text-weight: 400;
   --background-color: rgb(255, 255, 255);
   --background-image: url("");
-  --accent-color: rgb(0, 0, 0);
-  --button-text: rgb(255, 255, 255);
-  --gradient-color: #d3d3d3;
-  --gradinet-color-second: #ffffff00;
+  --accent-color: rgb(255, 255, 255);
 }

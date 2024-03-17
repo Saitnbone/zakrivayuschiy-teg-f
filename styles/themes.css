@@ -14,6 +14,7 @@
 */
 
 :root.theme-dark {
+  --main-color: rgb(0, 204, 20);
   --button-color: var(--accent-color);
   --button-text: #000;
   --gradient-settings: repeating-linear-gradient(
@@ -29,12 +30,13 @@
 }
 
 :root.theme-light {
+  --main-color: #000;
   --button-color: var(--button-text);
   --button-text: rgb(255, 255, 255);
   --gradient-settings: repeating-linear-gradient(#d3d3d3, transparent 2px),
     repeating-linear-gradient(90deg, #d3d3d3, transparent 2px),
     linear-gradient(#e7e7e7 0.01%, #1a1a1a);
-  --accent-color: rgb(0, 0, 0);
+  --accent-color: rgb(255, 255, 255);
   --background-color: rgb(255, 255, 255);
   --title-font-weight: 700;
   --main-text-weight: 400;
@@ -50,9 +52,10 @@
 
 @media (prefers-color-scheme: light) {
   :root {
+    --main-color: #000;
     --button-color: var(--button-text);
     --button-text: rgb(255, 255, 255);
-    --accent-color: #000;
+    --accent-color: rgb(255, 255, 255);
     --gradient-settings: repeating-linear-gradient(#d3d3d3, transparent 2px),
       repeating-linear-gradient(90deg, #d3d3d3, transparent 2px),
       linear-gradient(#e7e7e7 0.01%, #1a1a1a);
@@ -64,9 +67,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --main-color: rgb(0, 204, 20);
     --button-color: var(--button-text);
     --background-color: #000;
-
     --gradient-settings: repeating-linear-gradient(
         var(--background-color),
         transparent 2px
