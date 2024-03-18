@@ -142,6 +142,7 @@ ___________________________________________________________________
   position: relative;
   color: var(--main-color);
   border: none;
+  text-transform: uppercase;
   transition: opacity 0.3s ease, transform 0.3s ease, filter 0.3s ease;
 }
 
