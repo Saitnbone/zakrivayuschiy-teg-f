@@ -30,6 +30,7 @@ ___________________________________________________________________
   min-inline-size: 320px;
   min-block-size: 100dvb;
   background: var(--gradient-settings);
+  background-position: center;
   background-attachment: fixed;
   background-size: cover;
   color: var(--accent-color);
