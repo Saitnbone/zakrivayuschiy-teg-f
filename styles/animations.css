@@ -13,6 +13,7 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 
+/* Кейфрейм для стрелки в блоке смены темы приложения */
 @keyframes moveRightLeft {
   0% {
     transform: translateX(0);
@@ -22,12 +23,92 @@
   }
 }
 
+/* Классы для анимации heart */
+/* Первоначальное состояние анимации */
+.contour {
+  fill: var(--main-color);
+  transition: fill 0.1s linear;
+}
+
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+
+.core {
+  fill: transparent;
+  transition: fill 0.3s linear;
+  transition-delay: 0.03s;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+/* Состояние анимации при наведении на иконку */
+
+.like-icon:hover .main-body {
+  fill: var(--main-color);
+  transition: fill 0.3s linear;
+  transition-delay: 0.03s;
+}
+
+.like-icon:hover .core {
+  fill: var(--main-color);
+  transition: fill 0.3s linear;
+}
+
+/* Состояние анимации при active */
+
+.like-icon:active .main-body {
+  fill: red;
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon:active .core {
+  fill: red;
+  transition: fill 0.3s linear;
+}
+
+/* Анимация в состоянии liked */
+
+.like-icon.is-liked .contour {
+  fill: red;
+  animation: fill 0.3s linear;
+}
+
+.like-icon.is-liked .main-body {
+  fill: red;
+  animation: fill 0.3s 0.6s linear;
+}
+
+.like-icon.is-liked .core {
+  fill: red;
+  animation: fill 0.3s linear;
+}
+
+/* Начальные настройки heart */
+
+.is-liked {
+  transform-origin: center;
+  animation-direction: alternate;
+  animation: heartBeat 0.3s linear 0.1s 1;
+}
+
+.like-icon.is-liked .sparks {
+  fill: red;
+  animation-direction: alternate;
+  animation: sparkAnimation 0.3s linear 0.3s 1;
+}
+
+/* Кейфреймы для анимации heart */
+
 @keyframes heartBeat {
   from {
     transform: scale(1);
   }
   to {
-    transform: scale(1.5);
+    transform: scale(1.2);
   }
 }
 

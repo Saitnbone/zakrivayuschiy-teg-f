@@ -2,9 +2,21 @@
 
 :root {
   --main-color: #000;
-  --gradient-settings: repeating-linear-gradient(#d3d3d3, transparent 2px),
-    repeating-linear-gradient(90deg, #d3d3d3, transparent 2px),
-    linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+  --gradient-settings: repeating-linear-gradient(
+      to right,
+      transparent,
+      transparent 2px,
+      #d3d3d3 2px,
+      #d3d3d3 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 2px,
+      #d3d3d3 2px,
+      #d3d3d3 4px
+    ),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
   --title-font-weight: 700;
   --main-text-weight: 400;
   --background-color: rgb(255, 255, 255);
